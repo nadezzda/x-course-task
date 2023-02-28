@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.scss';
+import React, {useContext} from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import BookList from './components/bookList/BookList';
+import Cart from './components/cart/Cart';
+import Exception404 from './components/routes/Exception404';
+import SignIn from './components/signIn/SignIn';
+import SpecificBook from './components/specificBook/SpecificBook';
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import { AuthContext } from './context/AuthContext';
 
 function App() {
+  const { isAuthenticated } = useContext(AuthContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header />
+        <Routes >
+          <Route path='/' element={!isAuthenticated ? <SignIn /> : <Navigate to="/booklist" />} />
+          <Route path="booklist" element={isAuthenticated ? <BookList /> : <Navigate to="/" />}/>
+          <Route path='specificbook/:id' element={isAuthenticated ? <SpecificBook /> : <Navigate to="/" />} />
+          <Route path='cart' element={isAuthenticated ? <Cart /> : <Navigate to="/" />} />
+          <Route path='*' element={<Exception404 />}/>
+        </Routes>
+        <Footer />
     </div>
   );
 }

@@ -12,6 +12,13 @@
         &:hover {
             @include button-hover-style;
         }
+        &:disabled {
+            @include button-disable;
+        }
+    }
+    img {
+        width: 100px;
+        margin: 15% 45% 0;
     }
     #empty {
         font-size: 20px;

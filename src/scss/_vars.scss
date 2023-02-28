@@ -22,3 +22,8 @@ $general-color: rgb(129, 97, 47);
     border-radius: 20px;
     border: 1px solid $general-color;
 }
+@mixin button-disable {
+    filter:opacity(0.4);
+    background-color: white;
+    color: $general-color;
+}

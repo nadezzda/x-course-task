@@ -1,0 +1,16 @@
+@import "../../scss/vars";
+
+.exception404 {
+    width: 60%;
+    height: 600px;
+    @include blur-background;
+    border-radius: 40px;
+    color: $general-color;
+    margin: 8% auto;
+    p {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 28%;
+    }
+}

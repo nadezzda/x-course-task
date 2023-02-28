@@ -7,7 +7,7 @@
 .searchFilter {
     display: flex;
     @include blur-background;
-    width: 80%;
+    width: 100%;
     margin: 50px auto;
     padding: 10px;
     height: 60px;
@@ -36,7 +36,11 @@
     @include blur-background;
     border-radius: 40px;
     box-shadow: 23px 24px 24px 11px rgba(0, 0, 0, 0.3);
-    
+    img {
+        width: 200px;
+        margin: 20px 25%;
+        min-height: 300px;
+    }
     h2 {
         text-align: center;
         color: $general-color;

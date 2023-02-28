@@ -11,6 +11,14 @@ body {
     border-radius: 40px;
     @include blur-background;
 
+    img {
+        width: 160px;
+        height: 160px;
+        padding: 10px;
+        margin: 35px 33%;
+        border-radius: 100px;
+        background-color: white;
+    }
     form {
         display: block;
         margin: 10px 25%;
@@ -34,13 +42,19 @@ body {
         &:hover {
             @include button-hover-style;
         }
+        &:disabled {
+            @include button-disable;
+        }
     }
     @media screen and (max-width: $mobile-width) {
         input, button {
             width: 100%;
             margin: 10px 8px;
         }
-        
+        img {
+            width: 200px;
+            height: 200px;
+        }
     }
 }
 
