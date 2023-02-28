@@ -1,0 +1,70 @@
+@import "../../scss/vars";
+
+.bookList {
+    width: 95%;
+    margin: 10px auto;
+}
+.searchFilter {
+    display: flex;
+    @include blur-background;
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px;
+    height: 60px;
+    form {
+        margin: 15px;
+    }
+    input {
+        width: 400px;
+        @include input-style;
+    }
+    select {
+        width: 200px;
+        margin-left: 40px;
+        @include input-style;
+    }
+}
+.books {
+    display: flex;
+    margin: 40px auto 100px;
+    flex-wrap: wrap;
+}
+.oneBook {
+    margin: 15px;
+    padding: 15px;
+    min-width: 400px;
+    @include blur-background;
+    border-radius: 40px;
+    box-shadow: 23px 24px 24px 11px rgba(0, 0, 0, 0.3);
+    
+    h2 {
+        text-align: center;
+        color: $general-color;
+    }
+    #author {
+        color: $general-color;
+        margin: 20px;
+    }
+}
+.buy {
+    display: flex;
+    align-items: baseline;
+    p {
+        border-radius: 20px;
+        background-color: rgba(129, 98, 47, 0.758);
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 30px;
+    }
+    #buyBtn {
+        padding: 8px 10px;  
+        margin-left: 200px;  
+        @include button-style;
+        text-decoration: none;
+        &:hover {
+            @include button-hover-style;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import "../../scss/vars";
+
+.bookInfo {
+  display: flex; 
+  flex-direction: row;
+  width: 80%;
+  border-radius: 20px;
+  @include blur-background;
+  margin: 50px auto;
+  padding: 50px;
+}
+.bookDesc {
+  padding: 10px 30px;
+  width: 20%;
+  
+}
+.bookGeneralInfo {
+  width: 35%;
+  padding: 40px;
+  color: $general-color;
+  h2 {
+    white-space: pre-wrap;
+  }
+  p {
+    text-align: justify;
+  }
+}
+.bookPrice {
+  padding: 40px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.572);
+  border-radius: 20px;
+  color: $general-color;
+  margin-top: 10%;
+  input {
+    width: 30px;
+    @include input-style;
+    padding-left: 15px;
+  }
+  button {
+    padding: 10px 15px;
+    @include button-style;
+    margin: 40px 0 0 200px;
+    &:hover {
+      @include button-hover-style;
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

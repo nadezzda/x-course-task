@@ -1,4 +1,5 @@
 import React from 'react';
+import './specificBook.scss';
 
 export default function SpecificBook() {
     return (

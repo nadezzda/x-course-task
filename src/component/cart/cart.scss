@@ -1,0 +1,41 @@
+@import "../../scss/vars";
+
+.Cart {
+    width: 60%;
+    margin: 100px auto;
+    @include blur-background;
+    border-radius: 40px;
+    color: $general-color;
+    button {
+        @include button-style;
+        margin: 40px 0 0 80%;
+        &:hover {
+            @include button-hover-style;
+        }
+    }
+    #empty {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 0 150px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between; 
+        border: 1px solid $general-color;
+        padding: 10px;
+        margin: 20px;
+        background-color: white;
+        p:nth-child(1) {
+            width: 200px;
+        }
+    }
+    .head {
+        font-weight: bold;
+    }
+    #totalPrice {
+        text-align: end;
+        font-weight: bold;
+        padding: 25px;
+    }
+}
+

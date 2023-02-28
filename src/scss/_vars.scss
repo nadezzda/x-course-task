@@ -1,0 +1,24 @@
+$mobile-width: 480px;
+$tablet-width: 1024px;
+$general-color: rgb(129, 97, 47);
+
+@mixin blur-background {
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.48);
+}
+@mixin button-style {
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid $general-color;
+    color: $general-color;
+    background-color: rgb(255, 255, 255);
+}
+@mixin button-hover-style {
+    background-color: rgba(129, 98, 47, 0.831);
+    color: white;
+}
+@mixin input-style {
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid $general-color;
+}

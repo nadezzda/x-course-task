@@ -1,4 +1,5 @@
 import React from "react";
+import './booklist.scss';
 
 export default function BookList() {
     return(
