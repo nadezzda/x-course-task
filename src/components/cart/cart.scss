@@ -6,19 +6,42 @@
     @include blur-background;
     border-radius: 40px;
     color: $general-color;
-    button {
+    @media (max-width: $mobile-width) {
+        width: 90%;
+        margin: 80px 18px;
+    }
+    .btns {
+        button {
+            margin: 50px;
+        }
+        #clear {
         @include button-style;
-        margin: 40px 0 0 80%;
         &:hover {
             @include button-hover-style;
         }
         &:disabled {
             @include button-disable;
         }
+        }
+        #back {
+            @include button-style;
+            img {
+                width:25px;
+            }
+            &:hover {
+                @include button-hover-style;
+            }
+        }
+
     }
-    img {
+    #cartImg {
         width: 100px;
         margin: 15% 45% 0;
+        @media (max-width: $mobile-width) {
+            margin-right: 30%;
+            margin-left: 35%;
+        }
+    
     }
     #empty {
         font-size: 20px;
@@ -34,6 +57,9 @@
         background-color: white;
         p:nth-child(1) {
             width: 200px;
+            @media (max-width: $mobile-width) {
+                width: 50px;
+            }        
         }
     }
     .head {
