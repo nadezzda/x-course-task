@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 import { BooksContext } from "../../context/BooksContext";
 import "./cart.scss";
 
 export default function Cart() {
+  let navigate = useNavigate();
   const { cartItems, clearCart, defaultCartImage} = useContext(BooksContext);
   const books = cartItems.map((item) => item.book);
   const counts = cartItems.map((item) => item.count);
@@ -19,10 +21,13 @@ export default function Cart() {
       <Helmet>
         <title>Cart</title>
       </Helmet>
-      <button onClick={clearCart} disabled={buttonDisabled}>Clear a cart</button>
+      <div className="btns">
+        <button onClick={() => navigate(-1)} id="back" ><img src="https://cdn.icon-icons.com/icons2/933/PNG/512/back-arrow_icon-icons.com_72866.png" alt="Go back"/></button>
+        <button onClick={clearCart} disabled={buttonDisabled} id="clear" >Clear a cart</button>
+      </div>
         {(cartItems.length < 1) ? (
           <div>
-            <img src={defaultCartImage} alt="Empty cart"/>
+            <img id="cartImg" src={defaultCartImage} alt="Empty cart"/>
             <p id="empty">Cart is empty...</p>
           </div>
         ):(
