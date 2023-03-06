@@ -1,0 +1,74 @@
+@import "../../scss/vars";
+
+.Cart {
+    width: 60%;
+    margin: 100px auto;
+    @include blur-background;
+    border-radius: 40px;
+    color: $general-color;
+    @media (max-width: $mobile-width) {
+        width: 90%;
+        margin: 80px 18px;
+    }
+    .btns {
+        button {
+            margin: 50px;
+        }
+        #clear {
+        @include button-style;
+        &:hover {
+            @include button-hover-style;
+        }
+        &:disabled {
+            @include button-disable;
+        }
+        }
+        #back {
+            @include button-style;
+            img {
+                width:25px;
+            }
+            &:hover {
+                @include button-hover-style;
+            }
+        }
+
+    }
+    #cartImg {
+        width: 100px;
+        margin: 15% 45% 0;
+        @media (max-width: $mobile-width) {
+            margin-right: 30%;
+            margin-left: 35%;
+        }
+    
+    }
+    #empty {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 0 150px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between; 
+        border: 1px solid $general-color;
+        padding: 10px;
+        margin: 20px;
+        background-color: white;
+        p:nth-child(1) {
+            width: 200px;
+            @media (max-width: $mobile-width) {
+                width: 50px;
+            }        
+        }
+    }
+    .head {
+        font-weight: bold;
+    }
+    #totalPrice {
+        text-align: end;
+        font-weight: bold;
+        padding: 25px;
+    }
+}
+

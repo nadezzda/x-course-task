@@ -1,0 +1,68 @@
+@import "../../scss/vars";
+
+header {
+    width: 100%;
+    @include blur-background;
+    nav {
+        display: flex;
+        padding: 0 15px;
+        color: $general-color;
+        a {
+            text-decoration: none;
+            color: $general-color;
+            font-size: 20px;
+            @media (max-width: $mobile-width) {
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+        a:nth-child(1) {
+            padding-left: 35px;
+        }
+        #cartImg {
+            margin: 18px 0 10px 600px;
+            padding: 5px;
+            size: 15px;
+            @include button-style;
+            &:hover {
+                @include button-hover-style;
+            }
+            @media (max-width: $mobile-width) {
+                margin-left: 10px;
+            }
+        }
+        #avatarImg {
+            margin-left: 15px;
+            margin-top: 18px;
+            border-radius: 25px;
+            height: 25px;
+            padding: 8px;
+            border: 1px solid $general-color;
+            background-color: rgb(255, 255, 255);
+            @media (max-width: $mobile-width) {
+                margin-left: 4px;
+            }
+        }
+        #signBtn {
+            margin: 18px 25px 10px;
+            padding: 5px;
+            size: 15px;
+            @include button-style;
+            &:hover {
+                @include button-hover-style;
+            }
+            @media (max-width: $mobile-width) {
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+        }
+        #user {
+            margin-top: 20px;
+            padding: 8px;
+            margin-left: 80px;
+            @media (max-width: $mobile-width) {
+                display: none;
+            }
+        }
+    }
+}
