@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import BookList from './components/bookList/BookList';
 import Cart from './components/cart/Cart';
-import Exception404 from './components/routes/Exception404';
+// import Exception404 from './components/routes/Exception404';
 import SignIn from './components/signIn/SignIn';
 import SpecificBook from './components/specificBook/SpecificBook';
 import Header from "./components/header/Header";
@@ -16,11 +16,11 @@ function App() {
     <div className="App">
         <Header />
         <Routes >
-          <Route path='/' element={!isAuthenticated ? <SignIn /> : <Navigate to="/booklist" />} />
-          <Route path="booklist" element={isAuthenticated ? <BookList /> : <Navigate to="/" />}/>
-          <Route path='specificbook/:id' element={isAuthenticated ? <SpecificBook /> : <Navigate to="/" />} />
-          <Route path='cart' element={isAuthenticated ? <Cart /> : <Navigate to="/" />} />
-          <Route path='*' element={<Exception404 />}/>
+          <Route path='/signin' element={!isAuthenticated ? <SignIn /> : <Navigate to="/booklist" />} />
+          <Route path="booklist" element={isAuthenticated ? <BookList /> : <Navigate to="/signin" />}/>
+          <Route path='specificbook/:id' element={isAuthenticated ? <SpecificBook /> : <Navigate to="/signin" />} />
+          <Route path='cart' element={isAuthenticated ? <Cart /> : <Navigate to="/signin" />} />
+          <Route path='*' element={<Navigate to="/signin" />}/>
         </Routes>
         <Footer />
     </div>
