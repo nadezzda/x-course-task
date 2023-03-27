@@ -61,11 +61,8 @@
   color: $general-color;
   margin-top: 10%;
   button {
-<<<<<<< Updated upstream
     padding: 10px 15px;
-=======
     width: 35%;
->>>>>>> Stashed changes
     @include button-style;
     margin: 40px 10px 0 180px;
     &:hover {

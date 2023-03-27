@@ -29,7 +29,7 @@ export function Header() {
                 </nav>
                 ) : (
                 <nav>
-                    <h1><Link to="/">JS BAND STORE /</Link> <a href="https://endearing-taffy-335961.netlify.app/">Nadiia Malichenko</a></h1>
+                    <h1><Link to="/">JS BAND STORE /</Link> <a href="https://endearing-taffy-335961.netlify.app/">Nadiia</a></h1>
                 </nav>
             )}
         </header>
