@@ -1,6 +1,7 @@
 @import "../../scss/vars";
 
 header {
+    width: 100%;
     @include blur-background;
     nav {
         display: flex;
@@ -10,17 +11,6 @@ header {
             text-decoration: none;
             color: $general-color;
             font-size: 20px;
-<<<<<<< Updated upstream
-        }
-        #cartImg {
-            margin-left: 600px;
-            margin-top: 18px;
-            padding: 5px;
-            @include button-style;
-            &:hover {
-                @include button-hover-style;
-            }
-=======
             @media (max-width: $mobile-width) {
                 font-size: 14px;
                 white-space: nowrap;
@@ -28,33 +18,18 @@ header {
         }
         a:nth-child(1) {
             padding-left: 35px;
-            @media (max-width: $mobile-width) {
-                padding-left: 0;
-            }     
         }
         #cartImg {
-            display: flex;
-            img {
-                margin: 18px 0 10px 600px;
-                padding: 5px;
-                @include button-style;
-                &:hover {
-                    @include button-hover-style;
-                }
-                @media (max-width: $mobile-width) {
-                    margin-left: 10px;
-                }
+            margin: 18px 0 10px 600px;
+            padding: 5px;
+            size: 15px;
+            @include button-style;
+            &:hover {
+                @include button-hover-style;
             }
-            span {
-                @include button-style;
-                width: 20px;
-                height: 20px;
-                margin-top: 10px;
-                padding: 2px;
-                text-align: center;
-                font-size: 16px;
+            @media (max-width: $mobile-width) {
+                margin-left: 10px;
             }
->>>>>>> Stashed changes
         }
         #avatarImg {
             margin-left: 15px;
@@ -64,19 +39,30 @@ header {
             padding: 8px;
             border: 1px solid $general-color;
             background-color: rgb(255, 255, 255);
+            @media (max-width: $mobile-width) {
+                margin-left: 4px;
+            }
         }
         #signBtn {
-            margin-left: 30px;
-            margin-top: 25px;
+            margin: 18px 25px 10px;
+            padding: 5px;
+            size: 15px;
             @include button-style;
             &:hover {
                 @include button-hover-style;
+            }
+            @media (max-width: $mobile-width) {
+                margin-left: 3px;
+                margin-right: 3px;
             }
         }
         #user {
             margin-top: 20px;
             padding: 8px;
             margin-left: 80px;
+            @media (max-width: $mobile-width) {
+                display: none;
+            }
         }
     }
 }

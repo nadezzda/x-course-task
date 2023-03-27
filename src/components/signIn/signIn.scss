@@ -5,56 +5,63 @@ body {
     background-attachment: fixed;
 }
 .sign {
-    width: 500px;
-    height: 500px;
-    margin: 150px auto 200px;
+    width: 45vw;
+    height: fit-content;
+    margin: 15vh auto 20vh;
+    padding-bottom: 20px;
     border-radius: 40px;
     @include blur-background;
 
     img {
-        width: 160px;
-        height: 160px;
+        width: 12vw;
         padding: 10px;
-        margin: 35px 33%;
+        margin: 35px 15vw;
         border-radius: 100px;
         background-color: white;
+        @media (max-width: $mobile-width) {
+            margin-left: 34vw;
+        }
     }
     form {
         display: block;
-        margin: 10px 25%;
-    }
-    label {
-        padding: 70px;
-        font-size: 25px;
-        color: $general-color;
-    }
-    input{
-        width: 200px;
-        margin: 10px 20px;
-        padding-left: 15px;
-        @include input-style;
-    }
-    button {
-        width: 200px;
-        @include button-style;
-        margin: 10px 25px;
-        
-        &:hover {
-            @include button-hover-style;
+        margin: 10px 13vw;
+        label {
+            padding: 70px;
+            font-size: 25px;
+            color: $general-color;
+            @media (max-width: $mobile-width) {
+                font-size: 18px;
+            }
+
         }
-        &:disabled {
-            @include button-disable;
+        input{
+            width: 14vw;
+            margin: 10px 20px;
+            padding-left: 15px;
+            @include input-style;
+            @media (max-width: $mobile-width) {
+                width: 50vw;
+            }
+        }
+    
+        button {
+            width: 14vw;
+            @include button-style;
+            margin: 10px 25px;
+            
+            &:hover {
+                @include button-hover-style;
+            }
+            &:disabled {
+                @include button-disable;
+            }
+            @media (max-width: $mobile-width) {
+                width: 40vw;
+            }
         }
     }
-    @media screen and (max-width: $mobile-width) {
-        input, button {
-            width: 100%;
-            margin: 10px 8px;
-        }
-        img {
-            width: 200px;
-            height: 200px;
-        }
+    @media (max-width: $mobile-width) {
+        width: 80vw;
     }
 }
 
