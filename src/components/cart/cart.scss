@@ -6,6 +6,7 @@
     @include blur-background;
     border-radius: 40px;
     color: $general-color;
+<<<<<<< Updated upstream
     button {
         @include button-style;
         margin: 40px 0 0 80%;
@@ -15,6 +16,38 @@
         &:disabled {
             @include button-disable;
         }
+=======
+    @media (max-width: $mobile-width) {
+        width: 90%;
+        margin: 80px 18px;
+    }
+    .btns {
+        button {
+            margin: 50px;
+            @media (max-width: $mobile-width) {
+                margin: 20px;
+            } 
+        }
+        #clear {
+            @include button-style;
+            &:hover {
+                @include button-hover-style;
+            }
+            &:disabled {
+                @include button-disable;
+            }
+        }
+        #back {
+            @include button-style;
+            img {
+                width:25px;
+            }
+            &:hover {
+                @include button-hover-style;
+            }
+        }
+
+>>>>>>> Stashed changes
     }
     img {
         width: 100px;
@@ -34,7 +67,33 @@
         background-color: white;
         p:nth-child(1) {
             width: 200px;
+<<<<<<< Updated upstream
+=======
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media (max-width: $mobile-width) {
+                width: 50px;
+            }        
+>>>>>>> Stashed changes
         }
+        p:nth-child(4) {
+            @media (max-width: $mobile-width) {
+                display: none;
+            }     
+        }
+        img {
+            width: 30px;
+            padding: 5px;
+            margin-top: 6px;
+            @include button-style;
+            &:hover {
+                @include button-hover-style;
+            }
+            @media (max-width: $mobile-width) {
+                width: 15px;
+            }       
+        }        
     }
     .head {
         font-weight: bold;

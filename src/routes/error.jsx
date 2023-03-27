@@ -1,12 +1,13 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
-import './exception404.scss';
+import './error.scss';
 
-export default function Exception404() {
+
+export function Error() {
     return(
         <div className="exception404">
             <Helmet>
-                <title>EROR 404</title>
+                <title>ERROR</title>
             </Helmet>
             <p>Oops, something went wrong...</p>
         </div>

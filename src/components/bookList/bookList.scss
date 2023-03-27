@@ -3,6 +3,7 @@
 .bookList {
     width: 95%;
     margin: 10px auto;
+<<<<<<< Updated upstream
 }
 .searchFilter {
     display: flex;
@@ -69,6 +70,118 @@
         text-decoration: none;
         &:hover {
             @include button-hover-style;
+=======
+    @media (max-width: $mobile-width) {
+        margin: 0 15px;
+    }
+
+    .searchFilter {
+        display: flex;
+        @include blur-background;
+        width: 100%;
+        margin: 50px auto;
+        padding: 10px;
+        height: 60px;
+        @media (max-width: $mobile-width) {
+            width: 80%;
+        }
+        form {
+            margin: 15px;
+        }
+        input {
+            width: 400px;
+            @include input-style;
+            @media (max-width: $mobile-width) {
+                width: 120%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;    
+            }    
+        }
+        select {
+            width: 200px;
+            margin-left: 40px;
+            @include input-style;
+            @media (max-width: $mobile-width) {
+                width: 80%;
+                margin-left: 20px;
+            } 
+        }
+    }
+    .books {
+        display: flex;
+        margin: 40px auto 100px;
+        flex-wrap: wrap;
+    }
+    .oneBook {
+        margin: 15px;
+        padding: 15px;
+        min-width: 400px;
+        @include blur-background;
+        border-radius: 40px;
+        box-shadow: 23px 24px 24px 11px rgba(0, 0, 0, 0.3);
+        @media (max-width: $mobile-width) {
+            min-width: 85%;
+            margin: 5px 0;
+        } 
+
+        img {
+            width: 200px;
+            margin: 20px 25%;
+            min-height: 300px;
+            @media (max-width: $mobile-width) {
+                margin: 20px 10%;
+            } 
+        }
+        h2 {
+            margin-left: 22%;
+            text-align: justify;
+            color: $general-color;
+            width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media (max-width: $mobile-width) {
+                width: 150px;
+            } 
+        }
+        #author {
+            color: $general-color;
+            margin: 20px;
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media (max-width: $mobile-width) {
+                width: 150px;
+            } 
+        }
+    }
+    .buy {
+        display: flex;
+        align-items: baseline;
+        p {
+            border-radius: 20px;
+            background-color: rgba(129, 98, 47, 0.758);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+        #buyBtn {
+            margin-left: 200px; 
+            padding: 12px;
+            @include button-style;
+            text-decoration: none;
+            &:hover {
+                @include button-hover-style;
+            }
+            @media (max-width: $mobile-width) {
+                margin-left: 30%;
+            } 
+    
+>>>>>>> Stashed changes
         }
     }
 }

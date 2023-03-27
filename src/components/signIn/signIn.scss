@@ -58,3 +58,37 @@ body {
     }
 }
 
+<<<<<<< Updated upstream
+=======
+        }
+        input{
+            width: 14vw;
+            margin: 10px 20px;
+            padding-left: 15px;
+            @include input-style;
+            @media (max-width: $mobile-width) {
+                width: 50vw;
+            }
+        }
+    
+        button {
+            width: 14vw;
+            @include button-style;
+            margin: 10px 25px;
+            
+            &:hover {
+                @include button-hover-style;
+            }
+            &:disabled {
+                @include button-disable;
+            }
+            @media (max-width: $mobile-width) {
+                width: 50vw;
+            }
+        }
+    }
+    @media (max-width: $mobile-width) {
+        width: 80vw;
+    }
+}
+>>>>>>> Stashed changes

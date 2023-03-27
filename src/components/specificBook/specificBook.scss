@@ -8,6 +8,24 @@
   @include blur-background;
   margin: 50px auto;
   padding: 50px;
+<<<<<<< Updated upstream
+=======
+  #back {
+    @include button-style;
+    img {
+      width:25px;
+    }
+    &:hover {
+      @include button-hover-style;
+    }
+  }
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+    margin: 20px 12px 80px;
+  }
+>>>>>>> Stashed changes
 }
 .bookDesc {
   padding: 10px 30px;
@@ -35,21 +53,39 @@
   border-radius: 20px;
   color: $general-color;
   margin-top: 10%;
-  input {
-    width: 30px;
-    @include input-style;
-    padding-left: 15px;
-  }
   button {
+<<<<<<< Updated upstream
     padding: 10px 15px;
+=======
+    width: 35%;
+>>>>>>> Stashed changes
     @include button-style;
     margin: 40px 0 0 200px;
     &:hover {
       @include button-hover-style;
     }
+    @media (max-width: $mobile-width) {
+      margin: 30px 10px 0 120px;
+    } 
   }
   .row {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    #counter {
+      display: flex;
+      justify-content: flex-end;
+      input {
+        width: 20px;
+        @include input-style;
+        padding-left: 15px;
+      }
+      button {
+        text-align: center;
+        width: 10%;
+        margin: 4px;
+        height: 35px;
+        padding-right: 14px;
+      }
+    }
   }
 }
