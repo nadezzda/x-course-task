@@ -56,7 +56,7 @@ body {
                 @include button-disable;
             }
             @media (max-width: $mobile-width) {
-                width: 40vw;
+                width: 50vw;
             }
         }
     }

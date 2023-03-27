@@ -15,13 +15,13 @@
             margin: 50px;
         }
         #clear {
-        @include button-style;
-        &:hover {
-            @include button-hover-style;
-        }
-        &:disabled {
-            @include button-disable;
-        }
+            @include button-style;
+            &:hover {
+                @include button-hover-style;
+            }
+            &:disabled {
+                @include button-disable;
+            }
         }
         #back {
             @include button-style;
@@ -60,6 +60,18 @@
             @media (max-width: $mobile-width) {
                 width: 50px;
             }        
+        }
+        p:nth-child(4) {
+            @media (max-width: $mobile-width) {
+                display: none;
+            }
+        }
+        img {
+            @include button-style;
+            margin-top: 10px;
+            &:hover {
+                @include button-hover-style;
+            }
         }
     }
     .head {

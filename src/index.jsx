@@ -2,19 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import './index.scss';
-import App from './App';
-import { AuthProvider } from './context/AuthContext';
-import { BookProvider } from './context/BooksContext';
+import { Provider } from 'react-redux';
+import store from './store';
+import {App} from './containers';
+import { AuthContextProvider } from './context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HashRouter>
-      <AuthProvider>
-        <BookProvider>
+      <Provider store={store}>
+        <AuthContextProvider>
           <App />
-        </BookProvider>
-      </AuthProvider>
+        </AuthContextProvider>
+      </Provider>
     </HashRouter>
   </React.StrictMode>
 );

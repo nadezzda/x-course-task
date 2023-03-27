@@ -24,7 +24,10 @@
             width: 400px;
             @include input-style;
             @media (max-width: $mobile-width) {
-                width: 51%;
+                width: 120%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;    
             }    
         }
         select {
@@ -32,7 +35,8 @@
             margin-left: 40px;
             @include input-style;
             @media (max-width: $mobile-width) {
-                width: 30%;
+                width: 80%;
+                margin-left: 20px;
             } 
         }
     }
@@ -49,7 +53,7 @@
         border-radius: 40px;
         box-shadow: 23px 24px 24px 11px rgba(0, 0, 0, 0.3);
         @media (max-width: $mobile-width) {
-            min-width: 70%;
+            min-width: 85%;
             margin: 5px 0;
         } 
 
@@ -57,14 +61,32 @@
             width: 200px;
             margin: 20px 25%;
             min-height: 300px;
+            @media (max-width: $mobile-width) {
+                margin: 20px 10%;
+            } 
         }
         h2 {
-            text-align: center;
+            margin-left: 22%;
+            text-align: justify;
             color: $general-color;
+            width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media (max-width: $mobile-width) {
+                width: 150px;
+            } 
         }
         #author {
             color: $general-color;
             margin: 20px;
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media (max-width: $mobile-width) {
+                width: 150px;
+            } 
         }
     }
     .buy {
@@ -80,14 +102,17 @@
             margin-left: 30px;
         }
         #buyBtn {
-            padding: 15px;
-            padding-bottom: 0;
             margin-left: 200px; 
+            padding: 12px;
             @include button-style;
             text-decoration: none;
             &:hover {
                 @include button-hover-style;
             }
+            @media (max-width: $mobile-width) {
+                margin-left: 30%;
+            } 
+    
         }
     }
 }

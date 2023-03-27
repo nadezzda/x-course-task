@@ -1,30 +1,37 @@
-import React, { useState } from "react";
+import React, { createContext } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { LocalStorageService } from "../services/localStorage";
+import {  setUser } from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
 
-const AuthContext = React.createContext();
 
-function AuthProvider(props) {
-  const defaultUserImage = "https://cdn.icon-icons.com/icons2/602/PNG/512/Gender_Neutral_User_icon-icons.com_55902.png";
-  const defaultCartImage = "https://cdn.icon-icons.com/icons2/2387/PNG/512/shopping_cart_market_ecommerce_icon_144576.png"; 
+const AuthContext = createContext();
 
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("username") !== null
-  );
+function AuthContextProvider(props) {
   const navigate = useNavigate();
-  const login = (username) => {
-    localStorage.setItem("username", username);
-    setIsAuthenticated(true);
-  };
-
-  const logout = () => {
-    localStorage.removeItem("username");
-    setIsAuthenticated(false);
-    navigate("/");
-  };
-
+  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.user && state.user.currentUser);
+  const isAuthenticated = !!LocalStorageService.get('username');
   
 
-  return <AuthContext.Provider value={{login, logout, isAuthenticated, defaultUserImage, defaultCartImage} } {...props} />;
+  const handleLogin = (username) => {
+    // set user to local storage 
+    LocalStorageService.set('username', username);
+    dispatch(setUser(username));
+    navigate("/book-list");
+  };
+  const handleLogout = () => {
+    // remove user from local storage
+    LocalStorageService.remove('username');
+    dispatch(setUser(null));
+  };
+  
+  return (
+    <AuthContext.Provider
+      value={{ currentUser, isAuthenticated, handleLogin, handleLogout}}
+      {...props}
+    />
+  );
 }
 
-export { AuthContext, AuthProvider };
+export { AuthContext, AuthContextProvider };
