@@ -1,8 +1,29 @@
-# Getting Started with Create React App
+# Project Name: Bookstore Web Application
+
+This project is the result of learning different concepts that allowed the creation of a fully functional "Bookstore Web Application" and hosting it on a remote server. The project was developed using React application with React components and React Context.
+
+## The main functionality
+The main functionality of the project includes the following pages: 
+- **Login page**, which allows users to log in to the system. 
+- **Book list page**, where users can view the list of available books and apply filters based on name and price. 
+- **Single book page**, where users can view detailed information about a book and add it to their cart. 
+- **Cart page**, where users can view selected books and make payments. 
+
+The project also was deployed on GitHub Pages under the project name "x-course-task" using the learned scripts.
+
+## Technologies
+The following technologies were used in the project:
+- [React](https://react.dev/) using create-react-app; 
+- [React-Context](https://react.dev/learn/passing-data-deeply-with-context) for data persistence;
+- [React-router v6](https://reactrouter.com/en/6.10.0) for application page navigation; 
+- [Redux Toolkit](https://redux-toolkit.js.org/) for state management; 
+- [Preprocessor SCSS](https://sass-lang.com/) for styling.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
